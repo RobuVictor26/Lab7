@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url('poza.jpg');
+}
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<h1>Catalog:</h1>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img src="20211016_152918.jpg" style="width:22%">
+  <div class="text"><a href="prima mea pagina.html">Pagina lui Robu Victor</a></div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="248926715_1035044543735407_2866234986928985109_n.jpg" style="width:22%">
+  <div class="text"><a href="a patra mea pagina.html">Pagina lui Onofrei Cristian</a></div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="51546846543.jpg" style="width:22%">
+  <div class="text"><a href="a doua mea pagina.html">Pagina lui Simionov Alexanda</a></div>
+</div>
+
+
+<div class="mySlides fade">
+  
+  <img src="513484315351.jpg" style="width:22%">
+  <div class="text"><a href="a treia mea pagina.html">Pagina lui Petras Gabriela</a></div>
+</div>
+
+
+
+
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000);
+}
+</script>
